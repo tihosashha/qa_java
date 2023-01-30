@@ -4,11 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AnimalTest {
+
     @Test
     public void whenGetFamilyThanReturnCorrectString() {
         Animal animal = new Animal();
@@ -28,7 +28,7 @@ public class AnimalTest {
     }
 
     @Test
-    public void whenGetFoodUnknownThanTrowsError(){
+    public void whenGetFoodUnknownThanTrowsError() {
         Assert.assertThrows(Exception.class, () -> new Animal().getFood("test"));
 
     }

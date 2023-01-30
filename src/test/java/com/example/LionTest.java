@@ -31,7 +31,7 @@ public class LionTest {
     public void whenSexThanAssertHasMane() throws Exception {
         Lion lion = new Lion(actualSex, feline);
 
-        Assert.assertEquals(expectedHasMane, lion.hasMane);
+        Assert.assertEquals(expectedHasMane, lion.doesHaveMane());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class LionTest {
         Assert.assertThrows(Exception.class, () -> new Lion("test", feline));
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Пол: \"{0}\" Результат: \"{1}\"")
     public static Object[][] getSexData() {
         return new Object[][]{
                 {"Самец", true},

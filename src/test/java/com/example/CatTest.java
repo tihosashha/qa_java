@@ -15,13 +15,15 @@ public class CatTest {
     public void init() {
         MockitoAnnotations.initMocks(this);
     }
+
     @Test
-    public void whenGetSoundThanReturnMeow(){
+    public void whenGetSoundThanReturnMeow() {
         Cat cat = new Cat(feline);
         Assert.assertEquals("Мяу", cat.getSound());
     }
+
     @Test
-    public void whenGetFoodThanCallEatMeat() throws Exception{
+    public void whenGetFoodThanCallEatMeat() throws Exception {
         Cat cat = new Cat(feline);
 
         cat.getFood();
